@@ -20,4 +20,5 @@ ou can download the latest version of Geoserver from the official website.
 ![gd](https://user-images.githubusercontent.com/36950610/214763396-8f94ee84-260a-4c2d-a643-22cdda8b6a99.PNG)
 Once you have Geoserver set up, you can clone the Geo Discussion Forum repository to your local machine by running the following command in your terminal:
 
-```  git clone https://github.com/your-username/geo-discussion-forum.git
+``` text 
+git clone https://github.com/your-username/geo-discussion-forum.git
