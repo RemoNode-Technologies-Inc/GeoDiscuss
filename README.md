@@ -21,4 +21,19 @@ ou can download the latest version of Geoserver from the official website.
 Once you have Geoserver set up, you can clone the Geo Discussion Forum repository to your local machine by running the following command in your terminal:
 
 ``` text 
-git clone https://github.com/your-username/geo-discussion-forum.git
+   https://github.com/AdetonaMichael/WebGIS.git
+<br/>
+Next, you'll need to set up the database. The project uses PostgreSQL, so you'll need to have that installed and running on your machine. You can find instructions for installing PostgreSQL on the official website.
+
+After setting up the database, you can run the following command in the root directory of the project to set up the necessary tables:
+- you can polulate your database with Shapefiles using POST GIS
+
+### Contributing
+Next, you'll need to set up the database. The project uses PostgreSQL, so you'll need to have that installed and running on your machine. You can find instructions for installing PostgreSQL on the official website.
+
+After setting up the database, you can run the following command in the root directory of the project to set up the necessary tables:
+
+###
+License
+The Geo Discussion Forum project is licensed under the MIT License.
+
