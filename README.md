@@ -13,8 +13,8 @@ and editing of geographic information.
 - Responsive design for easy use on mobile devices
 <br/>
 ### Getting Started
-
-<br/>
 To get started with the Geo Discussion Forum, you'll first need to set up a Geoserver instance. Y
 ou can download the latest version of Geoserver from the official website. 
 (geoserver.org)
+
+![gd](https://user-images.githubusercontent.com/36950610/214763396-8f94ee84-260a-4c2d-a643-22cdda8b6a99.PNG)
