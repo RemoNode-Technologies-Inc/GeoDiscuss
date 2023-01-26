@@ -11,7 +11,7 @@ and editing of geographic information.
 - Adding and viewing maps and geographic information
 - Searching for and filtering discussion threads by location
 - Responsive design for easy use on mobile devices
-<br/>
+
 ### Getting Started
 To get started with the Geo Discussion Forum, you'll first need to set up a Geoserver instance. Y
 ou can download the latest version of Geoserver from the official website. 
