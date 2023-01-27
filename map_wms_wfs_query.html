@@ -5,7 +5,7 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
     <!-- <link rel="stylesheet" href="http://localhost:8080/geodiscuss/vendor/ol/examples/resources/layout.css" type="text/css">yet to be fixed -->
 	     <link rel="stylesheet" href="http://localhost:8080/geodiscuss/vendor/ol-layerswitcher/dist/ol-layerswitcher.css" />
-
+     <link rel="icon" href="img/logo.PNG">
 
 	  <!-- <script src="http://localhost:8080/geodiscuss/vendor/ol/build/ol.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
@@ -221,7 +221,7 @@
       z-index:50;
 	  top: 1%;
 	 height:1%;
-	  left: 5%;
+	  left:7%;
 	   
 	  }
 	  #getinfo{
@@ -324,13 +324,24 @@ button.btn-settings:active {
     color: white;
     background-color: #198754;
 }
+#chat{
+  color: white;
+    background-color: #337ab7;
+    border-radius: 5px;
+    margin-left: 40px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid lightgray;
+    position: absolute;
+    z-index: 500;
+    top: 1%;
+}
 </style>
 
     <title>Geo Discussion Forum</title>
   </head>
 
   <body>
-<div id="title"> <center ><h5><b>GEO DISCUSSION FORUM<b></h5></center></div>
+<div id="title"><center><h5><b>GEO DISCUSSION FORUM<b></h5></center></div>
 	 <div id="map"> 
 	 	
 		<form id="measure">
@@ -350,6 +361,7 @@ button.btn-settings:active {
         <option value="deactivate_getinfo">Deactivate GetFeatureinfo</option>
         </select>
     </form>
+	<button  id = "chat" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Chat</button>
 	<button onclick="wms_layers()" id = "wms_layers_btn">Available WMS Layers</button>
 	<button onclick="clear_all()" id = "clear_btn">Clear</button>
 
@@ -358,11 +370,13 @@ button.btn-settings:active {
 	 <div id="popup" class="ol-popup">
       <a href="#" id="popup-closer" class="ol-popup-closer"></a>
       <div id="popup-content"></div>
+      
     </div>
-	 <div id="info">&nbsp;</div>
+	 <div id="info"> &nbsp;</div>
 	 
 
-<div id="legend"></div>
+<div id="legend">
+</div>
 <div id="query_tab">
 	 <ul style="background-color: #337ab7;padding: 10px;" class="nav nav-tabs">
     <li style="display: inline-block; margin-right: auto; margin-left: auto;" class="active"><a style="text-decoration: none; color:white;"  data-toggle="tab" href="#form">Select by Attributes</a></li>
@@ -391,6 +405,7 @@ button.btn-settings:active {
 <label for="value">Enter Value</label>
 <input type="text" class="form-control" id="value" name="value">
 <br>
+
 <button class="btn btn-success" onclick="query()">Load Query</button>
 </div>
 
@@ -398,7 +413,9 @@ button.btn-settings:active {
 </div>
 </div>
 <div id = "table_data"> </div>
+
 <div id="wms_layers_window" title="Available WMS Layers" style="display:none"></div>
+
 	 <table id="table_wms_layers" class = "table-bordered">
      </table>
 
@@ -455,22 +472,31 @@ button.btn-settings:active {
                         type: 'base',
                         visible: true,
                         source: new ol.source.OSM()
-                    })
-                ]
-            });
-		var base_Image = new ol.layer.Group({
-                'title': 'Base Imagery',
-                layers: [
-                        new ol.layer.Tile({
+                    }),
+                    new ol.layer.Tile({
                         title: 'ESRI Imagery',
                         type: 'base',
                         visible: true,
                         source: new ol.source.XYZ({ url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    // maxZoom: 19 
+    maxZoom: 19 
   })
                     })
+
                 ]
             });
+	// 	var base_Image = new ol.layer.Group({
+  //               'title': 'Base Imagery',
+  //               layers: [
+  //                       new ol.layer.Tile({
+  //                       title: 'ESRI Imagery',
+  //                       type: 'base',
+  //                       visible: true,
+  //                       source: new ol.source.XYZ({ url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+  //   // maxZoom: 19 
+  // })
+  //                   })
+  //               ]
+  //           });
 		   
 		var OSM = new ol.layer.Tile({
             source: new ol.source.OSM(),
@@ -1689,6 +1715,118 @@ map.un('click', highlight);
 		}
 		
     </script>
+
+
+
+<!--Off Canva Section-->
+
+<div class="offcanvas offcanvas-end bg-white shadow" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header p-4 border-bottom">
+      <h6 id="offcanvasRightLabel" class="mb-0">
+        
+      </h6>
+      <h6 id="offcanvasLeftLabel" class="text-right">
+        
+      <button type="button" class="btn-close d-flex align-items-center text-dark" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa fa-times fa-2x text-danger"></i></button>
+  </div>
+
+  <ul class="nav justify-content-center nav-tabs">
+
+      <li id="connect_wallet_item" class="nav-item bg-primary">
+          <a class="nav-link text-white btn" onclick="connect_wallet()" id="connect_wallet_button">Connect & Discuss</a>
+      </li>
+    </ul>
+
+  <div class="offcanvas-body p-4">
+      <div class="row">
+          <div class="col-12">
+              <div class="card border-0" style="z-index: 1">
+                  <div class="card-body p-0">
+                      <form class="login-form" method="POST" action="#">
+                      
+                          <div class="row">
+                              <div class="col-12">
+                                  <a href="/"><img src="img/geologo.PNG" height="100" class="avatar avatar-small d-block mx-auto my-5"  alt="RedGEM Tech Logo"></a>
+                              </div>
+
+                              <div class="col-lg-12 mt-4">
+                                  <div class="mb-3">
+                                      <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                                      <div class="form-icon position-relative">
+                                          <i data-feather="user" class="fea icon-sm icons"></i>
+                                          <input type="email" class="form-control ps-5 @error('email') border-red-500 @enderror" placeholder="Email" autocomplete="off" name="email" required>
+                                        
+                                          <p class="text-danger  text-xs italic mt-4"></p>
+                                          
+                                      </div>
+                                  </div>
+                              </div><!--end col-->
+
+                              <div class="col-lg-12">
+                                  <div class="mb-3">
+                                      <label class="form-label">Password <span class="text-danger">*</span></label>
+                                      <div class="form-icon position-relative">
+                                          <i data-feather="key" class="fea icon-sm icons"></i>
+                                          <input name="password" type="password" autocomplete="off" class="form-control ps-5 @error('password') border-red-500 @enderror" placeholder="Password" required="">
+            
+                                          <p class="text-danger text-xs italic mt-4"></p>
+     
+                                      </div>
+                                  </div>
+                              </div><!--end col-->
+
+                              <div class="col-lg-12">
+                                  <div class="d-flex justify-content-between">
+                                      <div class="mb-3">
+                                          <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                              <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                                          </div>
+                                      </div>
+                                      <small class="forgot-pass mb-0"><a href="#" class="text-dark">Forgot password ?</a></small>
+                                  </div>
+                              </div><!--end col-->
+
+                              <div class="col-lg-12 mb-0">
+                                  <div class="d-grid">
+                                      <button id="btn-login" class="btn btn-primary">Sign in</button>
+                                  </div>
+                              </div><!--end col-->
+
+                              <div class="col-12 text-center mt-3">
+                                  <small><small class="text-dark me-2">Don't have an account ?</small> <a href="#" class="text-dark">Sign Up</a></small>
+                              </div><!--end col-->
+                          </div><!--end row-->
+                      </form>
+                  </div>
+              </div>
+          </div><!--end col-->
+      </div><!--end row-->
+  </div>
+
+
+  <!--------------------------table section----------------------------------->
+
+  <br/>
+  <div class="d-flex justify-content-center">
+
+  </div>
+
+
+  <div class="offcanvas-footer p-4 text-center">
+      <ul class="list-unstyled social-icon social mb-0">
+          <li class="list-inline-item"><a href="http://www.facebook.com/RedGEMTech" class="rounded"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.instagram.com/redgem_tech/" target="_blank" class="rounded"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li class="list-inline-item"><a href="https://twitter.com/RedGEM_Coin" class="rounded" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+<li class="list-inline-item"><a href="http://www.youtube.com/channel/UCE_knL3cgHyFtC5vlo6ebqA" target="_blank" class="rounded"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+
+
+          <li class="list-inline-item"><a href="http://www.linkedin.com/company/the-redgem-technologies-inc" target="_blank" class="rounded"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      </ul><!--end icon-->
+  </div>
+</div>
+
 	
   </body>
 </html>
