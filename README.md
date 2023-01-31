@@ -1,4 +1,4 @@
-# 🌍 Geo Discussion Forum 🗺️
+# 🌍 Geo Discussion Forum 🗺️ 🧑‍🤝‍🧑
 Welcome to the Geo Discussion Forum project! This project aims to create a web-based 
 discussion forum for users to share and discuss geographic information and maps. 
 The forum is built using Geoserver, an open-source server that allows for the publishing, viewing, 
