@@ -20,6 +20,9 @@ ou can download the latest version of Geoserver from the official website.
 ![gd](https://user-images.githubusercontent.com/36950610/214763396-8f94ee84-260a-4c2d-a643-22cdda8b6a99.PNG)
 Once you have Geoserver set up, you can clone the Geo Discussion Forum repository to your local machine by running the following command in your terminal:
 
+#Requirements 
+<a href="https://sourceforge.net/projects/geoserver/files/GeoServer/2.22.1/GeoServer-2.22.1-winsetup.exe">Geoserver</a>
+<a href="https://www.enterprisedb.com/postgresql-tutorial-resources-training?uuid=7c756686-90b4-4909-89ed-043e0705a76e&campaignId=7012J000001BfmaQAC">PostgreSQL 13.9 64bit windows</a>
 ``` text 
    https://github.com/AdetonaMichael/WebGIS.git
 ```
