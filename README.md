@@ -1,4 +1,4 @@
-# Geo Discussion Forum
+# 🌍 Geo Discussion Forum 🗺️ 🧑‍🤝‍🧑
 Welcome to the Geo Discussion Forum project! This project aims to create a web-based 
 discussion forum for users to share and discuss geographic information and maps. 
 The forum is built using Geoserver, an open-source server that allows for the publishing, viewing, 
@@ -20,8 +20,17 @@ ou can download the latest version of Geoserver from the official website.
 ![gd](https://user-images.githubusercontent.com/36950610/214763396-8f94ee84-260a-4c2d-a643-22cdda8b6a99.PNG)
 Once you have Geoserver set up, you can clone the Geo Discussion Forum repository to your local machine by running the following command in your terminal:
 
+Geoserver
+```text
+   https://sourceforge.net/projects/geoserver/files/GeoServer/2.22.1/GeoServer-2.22.1-winsetup.exe
+```
+PostgreSQL 13.9 64bit windows
+```text
+   https://www.enterprisedb.com/postgresql-tutorial-resources-training?uuid=7c756686-90b4-4909-89ed-043e0705a76e&campaignId=7012J000001BfmaQAC
+```
+pgAdmin 4
 ``` text 
-   https://github.com/AdetonaMichael/WebGIS.git
+    https://www.postgresql.org/ftp/pgadmin/pgadmin4/v6.19/windows/
 ```
 Next, you'll need to set up the database. The project uses PostgreSQL, so you'll need to have that installed and running on your machine. You can find instructions for installing PostgreSQL on the official website.
 
