@@ -67,7 +67,8 @@ const handle_login = () =>{
             document.getElementById('loginCard').classList.add('d-none')
             document.getElementById('chatCard').classList.remove('d-none');
          }else{
-            alert(data.message)
+            document.getElementById('email').style.borderColor = 'red';
+            document.getElementById('emailError').innerHTML = data.message;
          }
       })
 
@@ -301,8 +302,6 @@ function legend() {
 }
 
 legend();
-
-
 
 
 

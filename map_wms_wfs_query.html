@@ -77,7 +77,7 @@
   <div id="legend">
   </div>
   <div id="query_tab">
-    <ul style="background-color: #337ab7;padding: 10px;" class="nav nav-tabs">
+    <ul style="background-color: rgb(37, 3, 163);padding: 10px;" class="nav nav-tabs">
       <li style="display: inline-block; margin-right: auto; margin-left: auto;" class="active"><a
           style="text-decoration: none; color:white;" data-toggle="tab" href="#form">Select by Attributes</a></li>
 
@@ -135,87 +135,29 @@
 
     <ul class="nav justify-content-between nav-tabs"tent-center>
 
-      <li id="connect_wallet_item" class="nav-item bg-primary ">
+      <li id="connect_wallet_item" style="background-color: rgb(37, 3, 163);" class="nav-item ">
         <a class="nav-link text-white btn " onclick="connect_wallet()" id="connect_wallet_button"> Discuss</a>
       </li>
-      <li id="connect_wallet_item" class="nav-item bg-primary ">
+      <li id="connect_wallet_item" style="background-color: rgb(37, 3, 163);" class="nav-item ">
         <a class="nav-link text-white btn " id="logout"> Logout</a>
       </li>
     </ul>
 
-    <div class="offcanvas-body py-4">
+    <div class="offcanvas-body pb-4">
       <div class="h-100 row">
         <!-- <div class="col-12"> -->
           <div id="chatCard"  class="card p-0 d-none">
             <div class="card-header d-flex justify-content-between align-items-center p-3"
-              style="border-top: 4px solid #0d6efd">
+              style="border-top: 4px solid rgb(37, 3, 163)">
               <h5 class="mb-0">Chat messages</h5>
               <div class="d-flex flex-row align-items-center">
-                <span class="badge bg-primary me-3 mx-2">20</span>
-                <i class="fas fa-minus me-3 text-muted fa-xs"></i>
-                <i class="fas fa-comments me-3 text-muted fa-xs mx-4"></i>
-                <i class="fas fa-times text-muted fa-xs mx-2"></i>
+                <span style="background-color: rgb(37, 3, 163);" class="badge me-3 mx-2">20</span>
               </div>
             </div>
             <div class="card-body" data-mdb-perfect-scrollbar="true" style="overflow-y:auto;position: relative; height: 650px">
              
 
               <div id="chatItem"></div>
-              <!-- <div class="d-flex justify-content-between">
-                <p class="small mb-1">Timona Siera</p>
-                <p class="small mb-1 text-muted">23 Jan 2:00 pm</p>
-              </div>
-              <div class="d-flex flex-row justify-content-start">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
-                  alt="avatar 1" style="width: 45px; height: 100%;">
-                <div>
-                  <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">For what reason
-                    would it
-                    be advisable for me to think about business content?</p>
-                </div>
-              </div> -->
-  
-              <!-- <div class="d-flex justify-content-between">
-                <p class="small mb-1 text-muted">23 Jan 2:05 pm</p>
-                <p class="small mb-1">Johny Bullock</p>
-              </div>
-              <div class="d-flex flex-row justify-content-end mb-4 pt-1">
-                <div>
-                  <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-primary">Thank you for your believe in
-                    our
-                    supports</p>
-                </div>
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
-                  alt="avatar 1" style="width: 45px; height: 100%;">
-              </div> -->
-  
-              <!-- <div class="d-flex justify-content-between">
-                <p class="small mb-1">Timona Siera</p>
-                <p class="small mb-1 text-muted">23 Jan 5:37 pm</p>
-              </div> -->
-              <!-- <div class="d-flex flex-row justify-content-start">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
-                  alt="avatar 1" style="width: 45px; height: 100%;">
-                <div>
-                  <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing elit similique quae consequatur</p>
-                </div>
-              </div> -->
-  
-              <!-- <div class="d-flex justify-content-between">
-                <p class="small mb-1 text-muted">23 Jan 6:10 pm</p>
-                <p class="small mb-1">Johny Bullock</p>
-              </div>
-              <div class="d-flex flex-row justify-content-end mb-4 pt-1">
-                <div>
-                  <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-primary text-white">Dolorum quasi voluptates quas
-                    amet in
-                    repellendus perspiciatis fugiat</p>
-                </div>
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
-                  alt="avatar 1" style="width: 45px; height: 100%;">
-              </div> -->
   
             </div>
             <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
@@ -245,7 +187,7 @@
                         <input id="email"  type="email" class="form-control ps-5 @error('email') border-red-500 @enderror"
                           placeholder="Email" autocomplete="off" name="email" required>
 
-                        <p class="text-danger  text-xs italic mt-4"></p>
+                        <p id="emailError" class="text-danger  text-xs small italic mt-4"></p>
 
                       </div>
                     </div>
@@ -258,7 +200,7 @@
                         <input id="password" name="password" type="password" autocomplete="off"
                           class="form-control ps-5 @error('password') border-red-500 @enderror" placeholder="Password"
                           required="">
-                        <p class="text-danger text-xs italic mt-4"></p>
+                        <p id="passwordError" class="text-danger text-xs italic mt-4"></p>
                       </div>
                     </div>
                   </div>
@@ -275,7 +217,7 @@
                   </div>
                   <div class="col-lg-12 mb-0">
                     <div class="d-grid">
-                      <button id="btn-login" onclick=handle_login() class="btn btn-primary">Sign in</button>
+                      <button style="background-color: rgb(37, 3, 163); color: white;" id="btn-login" onclick=handle_login() class="btn ">Sign in</button>
                     </div>
                   </div>
                   <div class="col-12 text-center mt-3">

@@ -21,7 +21,7 @@ body {
   height: 4%;
   color: white;
   padding-top: 5px;
-  background-color: #337ab7;
+  background-color: #2503a3;
 }
 
 #map {
@@ -36,11 +36,10 @@ body {
 
 #wms_layers_btn {
   color: white;
-  background-color: #337ab7;
+  background-color: #2503a3;
   border-radius: 5px;
   margin-left: 40px;
   padding: 5px 10px 5px 10px;
-
   border: 1px solid lightgray;
   position: absolute;
   z-index: 500;
@@ -110,7 +109,7 @@ select {
   top: 1%;
   left: 75%;
   color: white;
-  background-color: #337ab7;
+  background-color:#2503a3;
   border-radius: 5px;
   margin-left: 40px;
   padding: 5px 10px 5px 10px;
@@ -270,11 +269,11 @@ select {
   border-top-color: #ffcc33;
 }
 
-</style><style>button.btn-settings {
+button.btn-settings {
   margin: 25px;
   padding: 20px 30px;
   font-size: 1.2em;
-  background-color: #337ab7;
+  background-color: #2503a3;
   color: white;
 }
 
@@ -294,7 +293,7 @@ button.btn-settings:active {
 .modal-header {
   height: 30px;
   padding: 20px;
-  background-color: #18456b;
+  background-color: #2503a3;
   color: white;
 }
 
@@ -323,7 +322,7 @@ button.btn-settings:active {
 }
 
 .ui-draggable .ui-dialog-titlebar {
-  background-color: #337ab7;
+  background-color: #2503a3;
   text-align: center;
   color: white;
 }
@@ -340,7 +339,7 @@ button.btn-settings:active {
 
 #chat {
   color: white;
-  background-color: #337ab7;
+  background-color: #2503a3;
   border-radius: 5px;
   margin-left: 40px;
   padding: 5px 10px 5px 10px;
